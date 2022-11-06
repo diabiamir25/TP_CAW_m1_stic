@@ -3,12 +3,12 @@ let status = document.querySelector("#status");
 
 let start = document.querySelector("#start");
 
-let boundaries = document.querySelectorAll(".boundary");
+var boundaries = document.querySelectorAll(".boundary");
 
 let end = document.querySelector("#end");
 
 
-
+let win = true;
 
 
   start.addEventListener("mouseover",function()
@@ -18,13 +18,15 @@ let end = document.querySelector("#end");
 
     for (var k = 0; k < boundaries.length; k++) {
 
-        let win = 0;
+       
 
       boundaries[k].addEventListener("mouseover", function() {
 
         win = false;
 
+
         this.style.background = "red";
+        
 
         alert("GAME OVER ");
        
@@ -37,6 +39,8 @@ let end = document.querySelector("#end");
     }
     
   });
+
+
 
 end.addEventListener("mouseover", function() {
   if (win == true) {
